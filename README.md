@@ -9,9 +9,9 @@ Implementation of our paper: [Reinforcement Learning for Solving the Vehicle Rou
 
 ## Dependencies
 
-
+* Python 3.6.10
 * Numpy
-* [tensorflow](https://www.tensorflow.org/)>=1.2
+* [tensorflow](https://www.tensorflow.org/)>=2.0
 * tqdm
 
 ## How to Run
@@ -42,4 +42,4 @@ All logs are stored in ``result.txt`` file stored in ``./logs/task_date_time`` d
 ![enter image description here](https://lh3.googleusercontent.com/eUh69ZQsIV4SIE6RjwasAEkdw2VZaTmaeR8Fqk33di70-BGU62fvmcp6HLeGLE61lJDS7jLMpFf2 "Sample VRP")
 
 ## Acknowledgements
-Thanks to [pemami4911/neural-combinatorial-rl-pytorch](https://github.com/pemami4911/neural-combinatorial-rl-pytorch) for getting the idea of restructuring the code.
+Thanks to https://github.com/OptMLGroup/VRP-RL.
