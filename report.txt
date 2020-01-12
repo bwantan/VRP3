@@ -1,0 +1,59 @@
+TensorFlow 2.0 Upgrade Script
+-----------------------------
+Converted 1 files
+Detected 1 issues that require attention
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+File: model/attention_agent.py
+--------------------------------------------------------------------------------
+model/attention_agent.py:53:29: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+================================================================================
+Detailed log follows:
+
+================================================================================
+--------------------------------------------------------------------------------
+Processing file 'model/attention_agent.py'
+ outputting to 'model/attention_agent.py'
+--------------------------------------------------------------------------------
+
+53:29: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+53:29: INFO: Renamed 'tf.get_variable' to 'tf.compat.v1.get_variable'
+54:35: INFO: Changing tf.contrib.layers xavier initializer to a tf.compat.v1.keras.initializers.VarianceScaling and converting arguments.
+
+67:21: INFO: Renamed 'tf.train.Saver' to 'tf.compat.v1.train.Saver'
+68:21: INFO: Renamed 'tf.get_collection' to 'tf.compat.v1.get_collection'
+68:39: INFO: Renamed 'tf.GraphKeys' to 'tf.compat.v1.GraphKeys'
+76:21: INFO: Added keywords to args of function 'tf.shape'
+108:31: INFO: Renamed 'tf.nn.rnn_cell.LSTMStateTuple' to 'tf.compat.v1.nn.rnn_cell.LSTMStateTuple'
+131:37: INFO: Added keywords to args of function 'tf.argmax'
+138:39: INFO: Renamed 'tf.random_uniform' to 'tf.random.uniform'
+144:41: INFO: Added keywords to args of function 'tf.argmin'
+149:36: INFO: Added keywords to args of function 'tf.reduce_sum'
+149:69: INFO: Added keywords to args of function 'tf.reduce_sum'
+151:28: INFO: Added keywords to args of function 'tf.cond'
+163:36: INFO: Renamed 'tf.log' to 'tf.math.log'
+166:36: INFO: Renamed 'tf.log' to 'tf.math.log'
+174:35: INFO: Added keywords to args of function 'tf.transpose'
+175:20: INFO: Added keywords to args of function 'tf.transpose'
+177:35: INFO: Added keywords to args of function 'tf.transpose'
+178:20: INFO: Added keywords to args of function 'tf.transpose'
+198:22: INFO: Renamed 'tf.log' to 'tf.math.log'
+224:17: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+225:21: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+229:45: INFO: Renamed 'tf.nn.rnn_cell.LSTMStateTuple' to 'tf.compat.v1.nn.rnn_cell.LSTMStateTuple'
+234:21: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+245:21: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+246:35: INFO: Renamed 'tf.layers.dense' to 'tf.compat.v1.layers.dense'
+246:51: INFO: Renamed 'tf.layers.dense' to 'tf.compat.v1.layers.dense'
+264:21: INFO: Added keywords to args of function 'tf.reduce_mean'
+265:22: INFO: tf.losses.mean_squared_error requires manual check. tf.losses have been replaced with object oriented versions in TF 2.0 and after. The loss function calls have been converted to compat.v1 for backward compatibility. Please update these calls to the TF 2.0 versions.
+265:22: INFO: Renamed 'tf.losses.mean_squared_error' to 'tf.compat.v1.losses.mean_squared_error'
+268:22: INFO: Renamed 'tf.train.AdamOptimizer' to 'tf.compat.v1.train.AdamOptimizer'
+269:23: INFO: Renamed 'tf.train.AdamOptimizer' to 'tf.compat.v1.train.AdamOptimizer'
+273:32: INFO: Renamed 'tf.get_collection' to 'tf.compat.v1.get_collection'
+273:50: INFO: Renamed 'tf.GraphKeys' to 'tf.compat.v1.GraphKeys'
+275:32: INFO: Renamed 'tf.get_collection' to 'tf.compat.v1.get_collection'
+275:50: INFO: Renamed 'tf.GraphKeys' to 'tf.compat.v1.GraphKeys'
+304:22: INFO: Renamed 'tf.global_variables_initializer' to 'tf.compat.v1.global_variables_initializer'
+--------------------------------------------------------------------------------
+
